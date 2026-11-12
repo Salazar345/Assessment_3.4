@@ -1,21 +1,5 @@
-"""
-Assessment 3.4: Non-linear Data Structure
-Name used: SALAZAR  ->  S, A, L, A, Z, A, R
-Because the letter A appears 3 times, each repeat is numbered (A1, A2, A3)
-so every node is unique.
-"""
+
 from collections import deque
-
-
-# ------------------------------------------------------------------
-# DIAGRAM 1: BINARY TREE
-#
-#              S                 level 0
-#            /   \
-#          A1      L             level 1
-#         /  \    /  \
-#       A2    Z  A3    R         level 2
-# ------------------------------------------------------------------
 class Node:
     def __init__(self, data):
         self.data = data
@@ -61,19 +45,7 @@ def tree_dfs(node, result=None):
     return result
 
 
-# ------------------------------------------------------------------
-# DIAGRAM 2: GRAPH
-#
-#            S
-#         /  |  \
-#       A1   Z   L
-#       |    |   |
-#       A2   A3--+
-#       |
-#       R
-#
-# Edges: S-A1, S-Z, S-L, A1-A2, A2-R, Z-A3, L-A3
-# ------------------------------------------------------------------
+
 def build_graph():
     graph = {
         "S":  ["A1", "Z", "L"],
